@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Web</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
+    
+    
+    <script>  
+    
+       
+        function handleFeqQuestion(id) {
+            const question = document.getElementById("question"+id);
+            var currentColor = question.style.color;
+            var plus = document.getElementById("question"+id+'_plus');
+            var minus = document.getElementById("question"+id+'_minus');
+            var answer = document.getElementById("answer"+id);
+            if (currentColor === "black" || currentColor === "") {
+                question.style.color = "#6B3CC9";
+                plus.style.display = "none";
+                minus.style.display = "block";
+                answer.style.display = "block";
+            } else if (currentColor === "#6B3CC9" || currentColor === "rgb(107, 60, 201)") {
+                question.style.color = "black";
+                plus.style.display = "block";
+                minus.style.display = "none";
+                answer.style.display = "none";
+            }
+        }
+
+        function closeHamburger() {
+            var hamburger = document.getElementById("hamburger");
+            hamburger.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        function openHamburger() {
+            var hamburger = document.getElementById("hamburger");
+            hamburger.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeHamburgerOnResize() {
+            var screenWidth = window.innerWidth
+            if (screenWidth >= 575) {
+                closeHamburger();
+            }
+        }
+
+        window.addEventListener('resize', closeHamburgerOnResize);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/111.png" alt="Company Logo">
+        </div>
+        <nav class="nav-item">
+            <ul>
+
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">CAREERS</a></li>
+            </ul>
+        </nav>
+        <div onclick="openHamburger()" class="menu-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                    fill="currentColor" />
+                <path
+                    d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z"
+                    fill="currentColor" />
+                <path
+                    d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z"
+                    fill="currentColor" />
+            </svg>
+        </div>
+        
+    </header>
+    <nav id="hamburger" class="nav-item-hamburger">
+        <span onclick="closeHamburger()" style="position: absolute; top: 10px; right: 30px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+            </svg>
+        </span>
+        <a >HOME</a>
+        <a >SERVICES</a>
+        <a >ABOUT US</a>
+        <a >CONTACT US</a>
+        <a >CAREERS</a>
+    </nav>
+    <main>
+    <div class="pic-container">
+        <img class="picture" src="img/front.jpeg" alt="Picture">
+        <div class="pic-sub-container">
+            <span>We Crush Your Competitors, Goals, And Sales Records - Without The B.S.</span>
+            <button class="primary" >GET FREE CONSULTATION</button>
+        </div>
+    </div>
+
+    <section class="contents">
+        
+        <div class="back1main">
+            <div>
+                <img class="backimg" src="img/back1.png" alt="web Picture">
+            </div>
+            <div class="back1">
+                <h1 class="title">Web & Mobile App Development</h1>
+                <p>Your web and mobile Apps are pieces of the puzzle to grow your business. 
+            We use frameworks which tailor content and engagement methods to respond to different 
+            intents shown by your potential customers who interact with your business online.</p>
+            <button class="primary" >LEARN MORE</button>
+            </div>
+        </div>
+
+        <div class="back1main">
+            
+            <div class="back1">
+                <h1 class="title">Digital Strategy Consulting</h1>
+                <p>Your digital strategy should complement the overall marketing strategy of the company. In online marketing, each component will never work in isolation and every business needs a different mix. We provide a clear concept and strategic overview to find the most efficient model for your business.</p>
+            <button class="primary" >LEARN MORE</button>
+            </div>
+            <div>
+                <img class="backimg" src="img/back2.png" alt="digital Picture">
+            </div>
+        </div>
+
+        <div class="back2main" style="text-align: center; justify-content: center; flex-direction: column; ">
+            <h1 class="title" style="font-family: 'Poppins', sans-serif ;">Frequently asked questions</h1>
+            <br/>
+            <br/>
+            <div class="feqQuestion" style="width: 75%; gap: 15px;">
+                <div class="question-container" id="question1" onclick="handleFeqQuestion('1')">
+                    <h2 class="question">Lorem ipsum dolor sit amet consectetur. Leo at sit eu libero?</h2>
+                    <span style="font-weight: 700; font-size: 36px; cursor: pointer;" id="question1_plus">&plus;</span>
+                    <span style="font-weight: 700; font-size: 36px; cursor: pointer; display: none;" id="question1_minus">&minus;</span>
+                </div>
+                <div class="answer-container" id="answer1">
+                    Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.
+                </div>
+            </div>
+            <div class="feqQuestion" style="width: 75%;">
+                <div class="question-container" id="question2" onclick="handleFeqQuestion('2')">
+                    <h2 class="question">Lorem ipsum dolor sit amet consectetur. Tortor scelerisque integer?</h2>
+                    <span style="font-weight: 700; font-size: 36px; cursor: pointer;" id="question2_plus">&plus;</span>
+                    <span style="font-weight: 700; font-size: 36px; cursor: pointer; display: none;" id="question2_minus">&minus;</span>
+                </div>
+                <div class="answer-container" id="answer2">
+                    Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.
+                </div>
+            </div>
+            <div class="feqQuestion" style="width: 75%;">
+                <div class="question-container" id="question3" onclick="handleFeqQuestion('3')">
+                    <h2 class="question">Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque nunc?</h2>
+                    <span style="font-weight: 700; font-size: 36px; cursor: pointer;" id="question3_plus">&plus;</span>
+                    <span style="font-weight: 700; font-size: 36px; cursor: pointer; display: none;" id="question3_minus">&minus;</span>
+                </div>
+                <div class="answer-container" id="answer3">
+                    Lorem ipsum dolor sit amet consectetur. Faucibus commodo suscipit id ipsum. Elementum ultrices nulla faucibus odio est sed aliquam. Sapien massa morbi risus sagittis tortor integer.
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+    
+</main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="logo">
+                <img src="img/111.png" alt="Company Logo">
+                <br/>
+                <br/>
+                <p class="footerp">
+                    Your goal is our target. Not anything in between. We use online marketing platforms and 
+                    tools to achieve single <br>objective - your business results.
+                </p>
+                
+                    
+                
+            </div>
+            <div class="footer-sub-con">
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="font-size: 21px;">Our Technologies</div>
+                    <span>ReactJS</span>
+                    <span>Gatsby</span>
+                    <span>NextJS</span>
+                    <span>NodeJS</span>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="font-size: 21px;">Our Services</div>
+                    <span>Social media Marketing</span>
+                    <span>Web & Mobile App Development</span>
+                    <span>Data & Analytics</span>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <br/>
+        <br/>
+       
+            <hr class="line"> 
+        
+        <br/>
+        <div class="footer-bottom">
+            <div>Privacy Policy</div>
+            <div>|</div>
+            <div>Terms & Conditions</div>
+        </div>
+    </footer>
+</body>
+</html>
